@@ -1,0 +1,48 @@
+##############################################################################
+# GIT CHEATSHEET (中文速查表) - by GaoFei (created on 2023/03/06)
+##############################################################################
+
+##############################################################################
+# 配置
+##############################################################################
+git config --global "Your Name"
+git config --global "Email Address"
+
+
+##############################################################################
+# 常用命令
+##############################################################################
+git init                    # 初始化仓库
+git clone xxx               # 拉取代码
+             
+git add .                   # 提交到暂存区
+git commit -m "change log"  # 提交内容
+git commit --amend          # 最近一次的提交做内容修改
+git remote add origin xxx   # 创建远程仓库
+git push origin name        # 推送代码
+
+git status                  # 查看状态
+git status -s               # 文件状态缩略信息
+
+git log --pretty=oneline    # 查看日志
+git log -n                  # 最近n条提交历史
+
+git reset --hard hashcode   # 恢复成这个版本
+git reset --hard HEAD^      # 退回上一个版本
+git reset --hard HEAD~5     # 回退到上5个版本
+git reset --hard id         # 回退到指定版本
+
+git branch                  # 查看分支
+git branch name             # 新建分支
+git checkout name           # 切换分支
+git checkout -b name        # 新建并切换分支
+git merge name              # 合并分支
+git branch -d name          # 删除分支
+
+##############################################################################
+# 清理工作区未track也未ignore的文件或文件夹(如各种临时.swp, .patch文件等)
+##############################################################################
+git clean -n                # 查看清理文件列表(不包括文件夹), 不执行实际清理动作
+git clean -n -d             # 查看清理文件列表(包括文件夹), 不执行实际清理动作
+git clean -f                # 清理所有未track文件
+git clean -df               # 清理所有未track文件和文件夹

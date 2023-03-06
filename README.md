@@ -11,3 +11,4 @@
 
 - [Adb](tools/adb.txt)
 - [FFmpeg](tools/ffmpeg.sh)
+- [Git](tools/git.txt)
